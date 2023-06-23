@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+//pętla for
+
+function getTemp1(temp) {
+  let sum = 0;
+  for (let i = 0; i < temp.length; i++) {
+    sum += temp[i];
+  }
+  return sum / temp.length;
+}
+ let dane1 = [2, 4, 9, -2, 8];
+console.log(typeof dane1);
+let wynik1 = getTemp1(dane1);
+console.log(wynik1);
+
+ //forEach
+
+function getTemp2(temp) {
+  let sum = 0;
+  temp.forEach((element) => {
+    sum += element;
+  });
+  return sum / temp.length;
+}
+ let dane2 = [2, 4, 9, -2, 8];
+console.log(typeof dane2);
+let wynik2 = getTemp2(dane2);
+console.log(wynik2);
+
+// Pętla while 
+ 
+function getTemp3(temp) { 
+  let sum = 0; 
+  let i = 0; 
+  while (i < temp.length) { 
+    sum += temp[i]; 
+    i++; 
+  } 
+  return sum / temp.length; 
+} 
+let dane3 = [2, 4, 9, -2, 8]; 
+console.log(typeof dane3); 
+let wynik3 = getTemp3(dane3); 
+console.log(wynik3); 
+
+    </script>
+</head>
+<body>
+  
+</body>
+</html>
