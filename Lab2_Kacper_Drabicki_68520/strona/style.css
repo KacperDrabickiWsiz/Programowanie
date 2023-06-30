@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px 2px #aaa;
+    padding: 20px 120px;
+    z-index: 100;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+  }
+  header div h2{
+    margin: 0;
+    padding: 0;
+    color: rgb(40, 158, 194);
+    justify-content: left;
+  
+  }
+  h1 span{
+    color: rgb(40, 158, 194);
+  }
+  .span{
+    color: greenyellow;
+  }
+    
+  
+header nav li {
+  margin-left: 20px;
+  
+}
+header nav li:first-child {
+  color: green;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+  }
+  
+  nav ul li a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  header li:first-child a {
+    color: orangered;
+    ;
+  }
+  article, section {
+    display: block;
+    padding: 0 120px;
+    font-size: 20px;
+  }
+  article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 120px;
+}
+.article-element {
+    width:50%;
+}
+section:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 120px;
+}
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px 2px #aaa;
+}
+main article::before{
+    position: absolute;
+    display: block;
+    background-color: #ddd;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+main article:first-child::before{
+    display: none;
+}
+section:first-child{
+    display: flex;
+    justify-items: calc();
+}
+.main_obraz{
+    width: 30%;
+    height: 30%;
+}
+article h4{
+    font-style: 30px;
+}
+article h4::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 15px;
+    background-color: orangered;
+}
+table tr th{
+    border: 2px solid orangered;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid orangered;
+}
+.tabela{
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid orangered;
+}
+td{
+    padding: 20px;
+}
