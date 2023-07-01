@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</head>
+<body>
+    <form id="myForm">
+      <label for="name">Imię:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="surname">Nazwisko:</label><br>
+      <input type="text" id="surname" name="surname"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br>
+      <label>Płeć:</label>
+      <input type="radio" id="female" name="gender" value="Kobieta">
+      <label for="female">Kobieta</label>
+      <input type="radio" id="male" name="gender" value="Mężczyzna">
+      <label for="male">Mężczyzna</label><br><br>
+      <input type="submit" value="Rejestracja">
+    </form> 
+
+    <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var name = document.getElementById("name").value;
+    var surname = document.getElementById("surname").value;
+    var email = document.getElementById("email").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    
+    console.clear();
+
+    if (!name || !surname || !email) {
+    alert("Wypełniuj wszystkie pola");
+    return;
+    }
+
+    if (name.charAt(0) !== name.charAt(0).toUpperCase()) {
+    alert("Imię powinno zaczynać się z dużej litery.");
+    return;
+    }
+
+    if (surname.charAt(0) !== surname.charAt(0).toUpperCase()) {
+    alert("Nazwisko powinno zaczynać się z dużej litery.");
+    return;
+    }
+    
+    if (!email.includes("@") || !email.includes(".")) {
+    alert("Wprowadź poprawny adres email.");
+    return;
+    }
+  
+    if (gender === null) {
+    alert("Wybierz swoją płeć.");
+    return;
+    }
+
+    console.log("Imię: " + name);
+    console.log("Nazwisko: " + surname);
+    console.log("Email: " + email);
+    console.log("Płeć: " + gender.value);
+    
+    });
+    </script>
+</body>
+</html>
